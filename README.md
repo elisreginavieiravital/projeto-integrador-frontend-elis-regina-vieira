@@ -1,33 +1,46 @@
 # Sistema de Avaliação de Competências
 
-Projeto Integrador da disciplina de Desenvolvimento Front-end para Web.
+**Uma aplicação web para apoiar a avaliação e o desenvolvimento de competências profissionais em escritórios de advocacia.**
 
-Sistema web demonstrativo para avaliação de competências técnicas e comportamentais de colaboradores administrativos de escritórios de advocacia.
+O sistema foi desenvolvido com foco na organização e visualização de avaliações de colaboradores administrativos, considerando competências técnicas e comportamentais relevantes para a rotina de trabalho.
 
-O projeto permitirá apresentar questionários e visualizar resultados fictícios. Desenvolvido inicialmente com HTML, CSS e JavaScript.
+## Sobre o projeto
 
-## Aula 02 — estrutura HTML base
+A proposta é oferecer uma experiência simples e intuitiva para registrar avaliações, acompanhar indicadores de desempenho e identificar oportunidades de desenvolvimento profissional.
 
-Página em `index.html`, com objetivo, lista de seis competências, tabela de resultados fictícios, link externo para a documentação de HTML da MDN e imagem PNG original em `assets/images/competencias.png`.
+O projeto combina uma interface organizada com recursos de análise de dados, facilitando a interpretação dos resultados individuais.
 
-As pastas `css/` e `js/` estão reservadas para as próximas aulas. Seus arquivos `.gitkeep` são marcadores vazios para que o Git preserve essas pastas; não são CSS nem JavaScript.
+## Funcionalidades
 
-Todos os códigos e notas são fictícios. A página desta aula não coleta dados nem calcula resultados.
+- **Avaliação de competências:** formulário com seis critérios de avaliação, utilizando notas de 1 a 5.
+- **Organização por categorias:** competências técnicas e comportamentais apresentadas separadamente.
+- **Registro de avaliações:** armazenamento demonstrativo dos dados no navegador.
+- **Análise de resultados:** consulta individual por colaborador, com cálculo de médias gerais e por categoria.
+- **Visualização gráfica:** barras horizontais para comparação das notas atribuídas.
+- **Layout responsivo:** interface adaptável a diferentes tamanhos de tela.
 
-## Como visualizar
+## Tecnologias utilizadas
 
-Na pasta do repositório, execute `python -m http.server 8000` (ou `python3 -m http.server 8000`) e abra http://localhost:8000/index.html no navegador. Também é possível usar o Live Server do VS Code.
+- **HTML5:** estrutura e organização semântica das páginas.
+- **CSS3:** identidade visual, responsividade e organização dos componentes.
+- **JavaScript:** validação, processamento de avaliações e apresentação dos resultados.
+- **LocalStorage:** armazenamento local dos dados demonstrativos.
 
-## Verificações da Aula 02
+## Como executar
 
-- Estrutura criada pelo terminal, com conferência de localização por `pwd` e pastas por `mkdir`.
-- Verificação programática de abertura/fechamento das tags, HTML5, idioma, título, parágrafos, seis itens de lista e seis linhas de três colunas de dados na tabela.
-- Conferência dos atributos `target`, `rel`, `alt` e caminho relativo da imagem.
-- Verificação da integridade do PNG e inspeção visual da imagem.
-- Servidor HTTP local: `index.html` e `assets/images/competencias.png` retornaram status 200.
-- Sem CSS, JavaScript ou formulário nesta etapa.
+1. Clone ou baixe este repositório.
+2. Abra a pasta do projeto no Visual Studio Code.
+3. Execute o arquivo `index.html` utilizando a extensão Live Server.
+4. Preencha uma avaliação e acesse a página **Análise de Resultados** para consultar as informações registradas.
 
-## Limites do projeto acadêmico
+## Escopo
 
-Dados exclusivamente fictícios; sem backend, banco de dados, autenticação ou integrações externas. O link de referência apenas abre a documentação, sem integração com o sistema.
+Esta versão é um protótipo funcional de frontend, desenvolvido para fins de demonstração e aprendizado.
 
+Os colaboradores são identificados por códigos fictícios, e as avaliações ficam armazenadas exclusivamente no navegador utilizado. O sistema não possui integração com servidores, autenticação ou banco de dados externo.
+
+## Desenvolvimento
+
+**Elis Regina Vieira Vital**
+
+Projeto desenvolvido durante a graduação em Análise e Desenvolvimento de Sistemas, com aplicação de conceitos de desenvolvimento web, organização da informação e experiência do usuário.
