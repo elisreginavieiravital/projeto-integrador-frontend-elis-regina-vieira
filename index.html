@@ -6,9 +6,13 @@
     <title>Sistema de Avaliação de Competências</title>
 </head>
 <body>
+    <header id="cabecalho">
     <h1>Sistema de Avaliação de Competências</h1>
     <p>Gestão de competências técnicas e comportamentais para apoiar o desenvolvimento de colaboradores administrativos de escritórios de advocacia.</p>
 
+    </header>
+    <main>
+    <section id="competencias">
     <h2>Competências avaliadas</h2>
     <ul>
         <li>Domínio de sistemas: utilizar as ferramentas de trabalho com atenção e autonomia.</li>
@@ -19,11 +23,49 @@
         <li>Comportamento sob pressão: manter o respeito e comunicar dificuldades em momentos de maior demanda.</li>
     </ul>
 
+    </section>
+    <section id="visao-geral">
     <h2>Competências técnicas e comportamentais</h2>
     <img src="assets/images/competencias.png"
          alt="Quadro com dois grupos: competências técnicas — domínio de sistemas, organização de tarefas e qualidade das entregas; competências comportamentais — comunicação, trabalho em equipe e comportamento sob pressão."
          width="640" height="320">
 
+    </section>
+    <section id="avaliacao">
+        <h2>Avaliação de competências</h2>
+        <p>Considere a rotina de trabalho e atribua notas de 1 a 5 a cada competência.</p>
+        <p><small>Utilize somente códigos de demonstração, como ADM-001.</small></p>
+        <form action="#avaliacao" method="get">
+            <fieldset>
+                <legend>Identificação da avaliação</legend>
+                <p><label for="codigo">Código do colaborador</label>
+                <input type="text" id="codigo" name="codigo" pattern="ADM-[0-9]{3}" placeholder="ADM-001" title="Use ADM- seguido de três números, como ADM-001" required></p>
+                <p><label for="data">Data da avaliação</label>
+                <input type="date" id="data" name="data" required></p>
+            </fieldset>
+            <fieldset>
+                <legend>Competências técnicas</legend>
+                <p><label for="sistemas">Domínio de sistemas</label>
+                <input type="number" id="sistemas" name="sistemas" min="1" max="5" step="1" required></p>
+                <p><label for="organizacao">Organização de tarefas</label>
+                <input type="number" id="organizacao" name="organizacao" min="1" max="5" step="1" required></p>
+                <p><label for="qualidade">Qualidade das entregas</label>
+                <input type="number" id="qualidade" name="qualidade" min="1" max="5" step="1" required></p>
+            </fieldset>
+            <fieldset>
+                <legend>Competências comportamentais</legend>
+                <p><label for="comunicacao">Comunicação</label>
+                <input type="number" id="comunicacao" name="comunicacao" min="1" max="5" step="1" required></p>
+                <p><label for="equipe">Trabalho em equipe</label>
+                <input type="number" id="equipe" name="equipe" min="1" max="5" step="1" required></p>
+                <p><label for="pressao">Comportamento sob pressão</label>
+                <input type="number" id="pressao" name="pressao" min="1" max="5" step="1" required></p>
+            </fieldset>
+            <button type="submit">Conferir preenchimento</button>
+            <button type="reset">Limpar campos</button>
+        </form>
+    </section>
+    <section id="resultados">
     <h2>Prévia de Resultados</h2>
     <p>Visão geral das competências e das notas atribuídas.</p>
     <p><small>Dados de demonstração.</small></p>
@@ -46,9 +88,13 @@
         </tbody>
     </table>
 
+    </section>
+    </main>
+    <footer>
     <details>
         <summary>Referências técnicas</summary>
         <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Documentação HTML — MDN (abre em nova aba)</a></p>
     </details>
+    </footer>
 </body>
 </html>
