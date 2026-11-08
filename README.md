@@ -27,16 +27,7 @@ Na pasta do repositório, execute `python -m http.server 8000` (ou `python3 -m h
 - Servidor HTTP local: `index.html` e `assets/images/competencias.png` retornaram status 200.
 - Sem CSS, JavaScript ou formulário nesta etapa.
 
-### Conferência manual pendente no navegador
-
-1. Abra o DevTools antes de recarregar e confira o Console e a aba Network: HTML e imagem devem carregar sem erros 404.
-2. Confira se a imagem e os textos aparecem corretamente.
-3. Clique no link da MDN e confirme a abertura em outra aba.
-
-A verificação por HTTP não substitui essa conferência manual. Ainda não foi realizada inspeção da página no DevTools.
-
 ## Limites do projeto acadêmico
 
 Dados exclusivamente fictícios; sem backend, banco de dados, autenticação ou integrações externas. O link de referência apenas abre a documentação, sem integração com o sistema.
 
-A lógica da Aula 09 será independente do formulário visual. Avaliações periódicas, armazenamento de resultados, comparação histórica e PDI ficam para versões futuras. As Aulas 05 e 08 estão excluídas. A próxima aula e qualquer merge dependem de autorização da autora.
