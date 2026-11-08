@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Análise de Resultados | Sistema de Avaliação de Competências</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <h1>Análise de Resultados</h1>
+        <p>Acompanhe as competências técnicas e comportamentais de cada colaborador.</p>
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a href="index.html#competencias">Competências</a>
+            <a href="index.html#avaliacao">Avaliação</a>
+            <a href="resultados.html" aria-current="page">Análise de Resultados</a>
+            <a href="index.html#apresentacao">Como funciona</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card" aria-labelledby="titulo-consulta">
+            <h2 id="titulo-consulta">Resultados por colaborador</h2>
+            <p><small>Dados de demonstração salvos apenas neste navegador.</small></p>
+            <p class="campo">
+                <label for="colaborador-resultados">Colaborador</label>
+                <select id="colaborador-resultados" name="colaborador">
+                    <option value="">Selecione um colaborador</option>
+                    <option value="ADM-001">ADM-001</option>
+                    <option value="ADM-002">ADM-002</option>
+                    <option value="ADM-003">ADM-003</option>
+                    <option value="ADM-004">ADM-004</option>
+                    <option value="ADM-005">ADM-005</option>
+                    <option value="ADM-006">ADM-006</option>
+                </select>
+            </p>
+            <p id="mensagem-resultados" role="status">Selecione um colaborador para consultar os resultados.</p>
+            <p><a href="index.html#avaliacao">Preencher avaliação</a></p>
+            <div id="painel-resultados" hidden>
+                <h3>Médias da avaliação</h3>
+                <dl class="resumo-medias">
+                    <div class="media-item"><dt>Média geral</dt><dd><span id="media-geral">—</span> <small>/ 5</small></dd></div>
+                    <div class="media-item"><dt>Competências técnicas</dt><dd><span id="media-tecnicas">—</span> <small>/ 5</small></dd></div>
+                    <div class="media-item"><dt>Competências comportamentais</dt><dd><span id="media-comportamentais">—</span> <small>/ 5</small></dd></div>
+                </dl>
+                <h3>Notas por competência</h3>
+                <ul class="notas-competencias">
+                    <li class="resultado-item">
+                        <div class="resultado-cabecalho"><span>Domínio de sistemas</span><strong id="nota-sistemas">— / 5</strong></div>
+                        <div class="barra-trilha" aria-hidden="true"><div id="barra-sistemas" class="barra-preenchimento"></div></div>
+                    </li>
+                    <li class="resultado-item">
+                        <div class="resultado-cabecalho"><span>Organização de tarefas</span><strong id="nota-organizacao">— / 5</strong></div>
+                        <div class="barra-trilha" aria-hidden="true"><div id="barra-organizacao" class="barra-preenchimento"></div></div>
+                    </li>
+                    <li class="resultado-item">
+                        <div class="resultado-cabecalho"><span>Qualidade das entregas</span><strong id="nota-qualidade">— / 5</strong></div>
+                        <div class="barra-trilha" aria-hidden="true"><div id="barra-qualidade" class="barra-preenchimento"></div></div>
+                    </li>
+                    <li class="resultado-item">
+                        <div class="resultado-cabecalho"><span>Comunicação</span><strong id="nota-comunicacao">— / 5</strong></div>
+                        <div class="barra-trilha" aria-hidden="true"><div id="barra-comunicacao" class="barra-preenchimento"></div></div>
+                    </li>
+                    <li class="resultado-item">
+                        <div class="resultado-cabecalho"><span>Trabalho em equipe</span><strong id="nota-equipe">— / 5</strong></div>
+                        <div class="barra-trilha" aria-hidden="true"><div id="barra-equipe" class="barra-preenchimento"></div></div>
+                    </li>
+                    <li class="resultado-item">
+                        <div class="resultado-cabecalho"><span>Comportamento sob pressão</span><strong id="nota-pressao">— / 5</strong></div>
+                        <div class="barra-trilha" aria-hidden="true"><div id="barra-pressao" class="barra-preenchimento"></div></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="js/avaliacoes.js" defer></script>
+    <script src="js/resultados.js" defer></script>
+</body>
+</html>
