@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Sistema de Avaliação de Competências</title>
 </head>
 <body>
@@ -10,11 +12,17 @@
     <h1>Sistema de Avaliação de Competências</h1>
     <p>Gestão de competências técnicas e comportamentais para apoiar o desenvolvimento de colaboradores administrativos de escritórios de advocacia.</p>
 
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a href="#competencias">Competências</a>
+            <a href="#avaliacao">Avaliação</a>
+            <a href="resultados.html">Análise de Resultados</a>
+            <a href="#apresentacao">Como funciona</a>
+        </nav>
     </header>
     <main>
-    <section id="competencias">
+    <section id="competencias" class="card">
     <h2>Competências avaliadas</h2>
-    <ul>
+    <ul class="lista-competencias">
         <li>Domínio de sistemas: utilizar as ferramentas de trabalho com atenção e autonomia.</li>
         <li>Organização de tarefas: acompanhar prioridades e cumprir os prazos das atividades.</li>
         <li>Qualidade das entregas: conferir informações e reduzir erros e retrabalho.</li>
@@ -24,51 +32,80 @@
     </ul>
 
     </section>
-    <section id="visao-geral">
+    <section id="visao-geral" class="card">
     <h2>Competências técnicas e comportamentais</h2>
     <img src="assets/images/competencias.png"
          alt="Quadro com dois grupos: competências técnicas — domínio de sistemas, organização de tarefas e qualidade das entregas; competências comportamentais — comunicação, trabalho em equipe e comportamento sob pressão."
          width="640" height="320">
 
     </section>
-    <section id="avaliacao">
+    <section id="avaliacao" class="card">
         <h2>Avaliação de competências</h2>
         <p>Considere a rotina de trabalho e atribua notas de 1 a 5 a cada competência.</p>
-        <p><small>Utilize somente códigos de demonstração, como ADM-001.</small></p>
-        <form action="#avaliacao" method="get">
+        <p><small>Selecione um código de demonstração para preencher a avaliação.</small></p>
+        <form id="form-avaliacao" action="resultados.html" method="get">
             <fieldset>
                 <legend>Identificação da avaliação</legend>
-                <p><label for="codigo">Código do colaborador</label>
-                <input type="text" id="codigo" name="codigo" pattern="ADM-[0-9]{3}" placeholder="ADM-001" title="Use ADM- seguido de três números, como ADM-001" required></p>
-                <p><label for="data">Data da avaliação</label>
+                <p class="campo"><label for="codigo">Código do colaborador</label>
+                <select id="codigo" name="codigo" required>
+                    <option value="" selected disabled>Selecione um colaborador</option>
+                    <option value="ADM-001">ADM-001</option>
+                    <option value="ADM-002">ADM-002</option>
+                    <option value="ADM-003">ADM-003</option>
+                    <option value="ADM-004">ADM-004</option>
+                    <option value="ADM-005">ADM-005</option>
+                    <option value="ADM-006">ADM-006</option>
+                </select></p>
+                <p class="campo"><label for="data">Data da avaliação</label>
                 <input type="date" id="data" name="data" required></p>
             </fieldset>
             <fieldset>
                 <legend>Competências técnicas</legend>
-                <p><label for="sistemas">Domínio de sistemas</label>
-                <input type="number" id="sistemas" name="sistemas" min="1" max="5" step="1" required></p>
-                <p><label for="organizacao">Organização de tarefas</label>
-                <input type="number" id="organizacao" name="organizacao" min="1" max="5" step="1" required></p>
-                <p><label for="qualidade">Qualidade das entregas</label>
-                <input type="number" id="qualidade" name="qualidade" min="1" max="5" step="1" required></p>
+                <div class="competencia-linha">
+                    <label for="sistemas">Domínio de sistemas</label>
+                    <small id="sistemas-descricao" class="competencia-descricao">Considere a autonomia e a precisão no uso dos sistemas de trabalho.</small>
+                    <input type="number" id="sistemas" name="sistemas" min="1" max="5" step="1" aria-describedby="sistemas-descricao" required>
+                </div>
+                <div class="competencia-linha">
+                    <label for="organizacao">Organização de tarefas</label>
+                    <small id="organizacao-descricao" class="competencia-descricao">Considere a definição de prioridades e o cumprimento dos prazos das tarefas.</small>
+                    <input type="number" id="organizacao" name="organizacao" min="1" max="5" step="1" aria-describedby="organizacao-descricao" required>
+                </div>
+                <div class="competencia-linha">
+                    <label for="qualidade">Qualidade das entregas</label>
+                    <small id="qualidade-descricao" class="competencia-descricao">Considere a precisão das informações, a revisão e a necessidade de retrabalho.</small>
+                    <input type="number" id="qualidade" name="qualidade" min="1" max="5" step="1" aria-describedby="qualidade-descricao" required>
+                </div>
             </fieldset>
             <fieldset>
                 <legend>Competências comportamentais</legend>
-                <p><label for="comunicacao">Comunicação</label>
-                <input type="number" id="comunicacao" name="comunicacao" min="1" max="5" step="1" required></p>
-                <p><label for="equipe">Trabalho em equipe</label>
-                <input type="number" id="equipe" name="equipe" min="1" max="5" step="1" required></p>
-                <p><label for="pressao">Comportamento sob pressão</label>
-                <input type="number" id="pressao" name="pressao" min="1" max="5" step="1" required></p>
+                <div class="competencia-linha">
+                    <label for="comunicacao">Comunicação</label>
+                    <small id="comunicacao-descricao" class="competencia-descricao">Considere a clareza das informações, a escuta e o alinhamento com a equipe.</small>
+                    <input type="number" id="comunicacao" name="comunicacao" min="1" max="5" step="1" aria-describedby="comunicacao-descricao" required>
+                </div>
+                <div class="competencia-linha">
+                    <label for="equipe">Trabalho em equipe</label>
+                    <small id="equipe-descricao" class="competencia-descricao">Considere a colaboração, o apoio aos colegas e o compartilhamento de informações.</small>
+                    <input type="number" id="equipe" name="equipe" min="1" max="5" step="1" aria-describedby="equipe-descricao" required>
+                </div>
+                <div class="competencia-linha">
+                    <label for="pressao">Comportamento sob pressão</label>
+                    <small id="pressao-descricao" class="competencia-descricao">Considere o equilíbrio, o respeito e a comunicação de dificuldades em situações de maior demanda.</small>
+                    <input type="number" id="pressao" name="pressao" min="1" max="5" step="1" aria-describedby="pressao-descricao" required>
+                </div>
             </fieldset>
-            <button type="submit">Conferir preenchimento</button>
-            <button type="reset">Limpar campos</button>
+            <button type="submit" class="botao">Salvar avaliação e ver resultados</button>
+            <button type="reset" class="botao botao-secundario">Limpar campos</button>
+            <p id="form-mensagem" role="alert" hidden></p>
         </form>
     </section>
-    <section id="resultados">
+    <section id="resultados" class="card">
     <h2>Prévia de Resultados</h2>
     <p>Visão geral das competências e das notas atribuídas.</p>
     <p><small>Dados de demonstração.</small></p>
+    <button type="button" id="executar-analise" class="botao botao-secundario">Executar análise demonstrativa</button>
+    <div class="tabela-container">
     <table>
         <caption>Resultados por competência</caption>
         <thead>
@@ -87,7 +124,20 @@
             <tr><td>ADM-006</td><td>Comportamento sob pressão</td><td>3</td></tr>
         </tbody>
     </table>
+    </div>
 
+    </section>
+    <section id="apresentacao" class="card">
+        <h2>Como avaliar competências</h2>
+        <p>Conheça as competências, confira o preenchimento e explore a prévia de resultados.</p>
+        <!-- WebM/VP9 prioriza compressão eficiente; MP4/H.264 amplia a compatibilidade. -->
+        <!-- preload="none": o vídeo está abaixo do conteúdo principal e só deve baixar ao iniciar a reprodução. -->
+        <video controls preload="none" poster="assets/images/apresentacao-poster.png" width="640" height="360">
+            <source src="assets/media/apresentacao.webm" type="video/webm">
+            <source src="assets/media/apresentacao.mp4" type="video/mp4">
+            <track kind="captions" src="assets/captions/apresentacao.vtt" srclang="pt-BR" label="Português" default>
+            Seu navegador não reproduz este vídeo. <a href="assets/media/apresentacao.mp4">Baixe a apresentação em MP4</a>.
+        </video>
     </section>
     </main>
     <footer>
@@ -96,5 +146,8 @@
         <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Documentação HTML — MDN (abre em nova aba)</a></p>
     </details>
     </footer>
+    <script src="js/avaliacoes.js" defer></script>
+    <script src="js/formulario.js" defer></script>
+    <script src="js/logica.js" defer></script>
 </body>
 </html>

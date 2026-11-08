@@ -1,0 +1,343 @@
+:root {
+    --cor-fundo: #f3f5f2;
+    --cor-superficie: #ffffff;
+    --cor-texto: #233c40;
+    --cor-primaria: #174f52;
+    --cor-destaque: #755322;
+    --cor-borda: #c3d1cd;
+    --espaco: 1.25rem;
+    --raio: 0.875rem;
+}
+
+/* rem respeita o tamanho de texto configurado no navegador. */
+body {
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+#cabecalho {
+    padding: 3rem var(--espaco);
+    color: var(--cor-superficie);
+    background: var(--cor-primaria);
+    border-bottom: 0.35rem solid var(--cor-destaque);
+}
+
+/* O filho direto limita a largura apenas dos textos do cabeçalho. */
+#cabecalho > h1,
+#cabecalho > p {
+    max-width: 68rem;
+    margin: 0 auto var(--espaco);
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+main,
+footer {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: var(--espaco);
+}
+
+.card {
+    margin: 0 0 var(--espaco);
+    padding: 1.75rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background: var(--cor-superficie);
+}
+
+.lista-competencias {
+    padding-left: 1.4rem;
+    list-style-type: square;
+}
+
+.lista-competencias li {
+    margin-bottom: 0.75rem;
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--raio);
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0 0 var(--espaco);
+    padding: var(--espaco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+}
+
+legend {
+    padding: 0 0.5rem;
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+.campo {
+    margin: 0 0 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    max-width: 30rem;
+    padding: 0.7rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 0.4rem;
+    color: var(--cor-texto);
+    background: var(--cor-superficie);
+    font: inherit;
+}
+
+.botao {
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    padding: 0.75rem 1.2rem;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 0.5rem;
+    color: var(--cor-superficie);
+    background: var(--cor-primaria);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-secundario {
+    color: var(--cor-primaria);
+    background: var(--cor-superficie);
+}
+
+:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
+}
+
+.tabela-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 0.6rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+th,
+td {
+    padding: 0.9rem;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: left;
+}
+
+th {
+    color: var(--cor-primaria);
+    background: var(--cor-fundo);
+}
+
+a:link {
+    color: var(--cor-primaria);
+}
+
+a:visited {
+    color: #614078;
+}
+
+a:hover {
+    color: var(--cor-destaque);
+    text-decoration-thickness: 0.15rem;
+}
+
+a:active {
+    color: #7e2e27;
+}
+
+small {
+    font-size: 0.875rem;
+}
+
+summary {
+    cursor: pointer;
+    color: var(--cor-primaria);
+}
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    max-width: 68rem;
+    margin: 1.75rem auto 0;
+}
+
+.navegacao a {
+    padding: 0.4rem 0;
+    text-underline-offset: 0.3rem;
+}
+
+/* Estados próprios preservam o contraste sobre o cabeçalho escuro. */
+.navegacao a:link,
+.navegacao a:visited {
+    color: #ffffff;
+}
+
+.navegacao a:hover,
+.navegacao a:focus-visible {
+    color: #f3d6a1;
+}
+
+.navegacao a:active {
+    color: #e9bc71;
+}
+
+.lista-competencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--espaco);
+    padding-left: 1.25rem;
+}
+
+.lista-competencias li {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background: var(--cor-fundo);
+}
+
+/* A alternância distingue os itens sem atribuir significado à posição. */
+.lista-competencias li:nth-child(even) {
+    background: #e7efeb;
+}
+
+.competencia-linha {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) minmax(5rem, 6rem);
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.competencia-linha:last-child {
+    border-bottom: 0;
+}
+
+.competencia-linha label {
+    margin: 0;
+}
+
+.competencia-descricao {
+    line-height: 1.5;
+}
+
+@media (max-width: 42rem) {
+    .competencia-linha {
+        grid-template-columns: minmax(0, 1fr) 5rem;
+    }
+
+    .competencia-linha label {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .competencia-descricao {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .competencia-linha input {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+}
+
+[hidden] {
+    display: none;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.resumo-medias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: var(--espaco);
+    margin: 0 0 2rem;
+}
+
+.media-item {
+    padding: var(--espaco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background: var(--cor-fundo);
+}
+
+.media-item dd {
+    margin: 0.35rem 0 0;
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.notas-competencias {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.resultado-item {
+    margin-bottom: 1.5rem;
+}
+
+.resultado-cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.35rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.barra-trilha {
+    height: 0.75rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #e1e9e5;
+}
+
+.barra-preenchimento {
+    height: 100%;
+    background: var(--cor-primaria);
+}
+
+.nota-1 { width: 20%; }
+.nota-2 { width: 40%; }
+.nota-3 { width: 60%; }
+.nota-4 { width: 80%; }
+.nota-5 { width: 100%; }
