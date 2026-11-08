@@ -99,7 +99,8 @@ label {
     font-weight: 600;
 }
 
-input {
+input,
+select {
     display: block;
     width: 100%;
     max-width: 30rem;
@@ -232,4 +233,46 @@ summary {
 /* A alternância distingue os itens sem atribuir significado à posição. */
 .lista-competencias li:nth-child(even) {
     background: #e7efeb;
+}
+
+.competencia-linha {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) minmax(5rem, 6rem);
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.competencia-linha:last-child {
+    border-bottom: 0;
+}
+
+.competencia-linha label {
+    margin: 0;
+}
+
+.competencia-descricao {
+    line-height: 1.5;
+}
+
+@media (max-width: 42rem) {
+    .competencia-linha {
+        grid-template-columns: minmax(0, 1fr) 5rem;
+    }
+
+    .competencia-linha label {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .competencia-descricao {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .competencia-linha input {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
 }
