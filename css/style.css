@@ -185,3 +185,51 @@ summary {
     cursor: pointer;
     color: var(--cor-primaria);
 }
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    max-width: 68rem;
+    margin: 1.75rem auto 0;
+}
+
+.navegacao a {
+    padding: 0.4rem 0;
+    text-underline-offset: 0.3rem;
+}
+
+/* Estados próprios preservam o contraste sobre o cabeçalho escuro. */
+.navegacao a:link,
+.navegacao a:visited {
+    color: #ffffff;
+}
+
+.navegacao a:hover,
+.navegacao a:focus-visible {
+    color: #f3d6a1;
+}
+
+.navegacao a:active {
+    color: #e9bc71;
+}
+
+.lista-competencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--espaco);
+    padding-left: 1.25rem;
+}
+
+.lista-competencias li {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background: var(--cor-fundo);
+}
+
+/* A alternância distingue os itens sem atribuir significado à posição. */
+.lista-competencias li:nth-child(even) {
+    background: #e7efeb;
+}
