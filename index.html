@@ -42,32 +42,58 @@
     <section id="avaliacao" class="card">
         <h2>Avaliação de competências</h2>
         <p>Considere a rotina de trabalho e atribua notas de 1 a 5 a cada competência.</p>
-        <p><small>Utilize somente códigos de demonstração, como ADM-001.</small></p>
+        <p><small>Selecione um código de demonstração para preencher a avaliação.</small></p>
         <form action="#avaliacao" method="get">
             <fieldset>
                 <legend>Identificação da avaliação</legend>
                 <p class="campo"><label for="codigo">Código do colaborador</label>
-                <input type="text" id="codigo" name="codigo" pattern="ADM-[0-9]{3}" placeholder="ADM-001" title="Use ADM- seguido de três números, como ADM-001" required></p>
+                <select id="codigo" name="codigo" required>
+                    <option value="" selected disabled>Selecione um colaborador</option>
+                    <option value="ADM-001">ADM-001</option>
+                    <option value="ADM-002">ADM-002</option>
+                    <option value="ADM-003">ADM-003</option>
+                    <option value="ADM-004">ADM-004</option>
+                    <option value="ADM-005">ADM-005</option>
+                    <option value="ADM-006">ADM-006</option>
+                </select></p>
                 <p class="campo"><label for="data">Data da avaliação</label>
                 <input type="date" id="data" name="data" required></p>
             </fieldset>
             <fieldset>
                 <legend>Competências técnicas</legend>
-                <p class="campo"><label for="sistemas">Domínio de sistemas</label>
-                <input type="number" id="sistemas" name="sistemas" min="1" max="5" step="1" required></p>
-                <p class="campo"><label for="organizacao">Organização de tarefas</label>
-                <input type="number" id="organizacao" name="organizacao" min="1" max="5" step="1" required></p>
-                <p class="campo"><label for="qualidade">Qualidade das entregas</label>
-                <input type="number" id="qualidade" name="qualidade" min="1" max="5" step="1" required></p>
+                <div class="competencia-linha">
+                    <label for="sistemas">Domínio de sistemas</label>
+                    <small id="sistemas-descricao" class="competencia-descricao">Considere a autonomia e a precisão no uso dos sistemas de trabalho.</small>
+                    <input type="number" id="sistemas" name="sistemas" min="1" max="5" step="1" aria-describedby="sistemas-descricao" required>
+                </div>
+                <div class="competencia-linha">
+                    <label for="organizacao">Organização de tarefas</label>
+                    <small id="organizacao-descricao" class="competencia-descricao">Considere a definição de prioridades e o cumprimento dos prazos das tarefas.</small>
+                    <input type="number" id="organizacao" name="organizacao" min="1" max="5" step="1" aria-describedby="organizacao-descricao" required>
+                </div>
+                <div class="competencia-linha">
+                    <label for="qualidade">Qualidade das entregas</label>
+                    <small id="qualidade-descricao" class="competencia-descricao">Considere a precisão das informações, a revisão e a necessidade de retrabalho.</small>
+                    <input type="number" id="qualidade" name="qualidade" min="1" max="5" step="1" aria-describedby="qualidade-descricao" required>
+                </div>
             </fieldset>
             <fieldset>
                 <legend>Competências comportamentais</legend>
-                <p class="campo"><label for="comunicacao">Comunicação</label>
-                <input type="number" id="comunicacao" name="comunicacao" min="1" max="5" step="1" required></p>
-                <p class="campo"><label for="equipe">Trabalho em equipe</label>
-                <input type="number" id="equipe" name="equipe" min="1" max="5" step="1" required></p>
-                <p class="campo"><label for="pressao">Comportamento sob pressão</label>
-                <input type="number" id="pressao" name="pressao" min="1" max="5" step="1" required></p>
+                <div class="competencia-linha">
+                    <label for="comunicacao">Comunicação</label>
+                    <small id="comunicacao-descricao" class="competencia-descricao">Considere a clareza das informações, a escuta e o alinhamento com a equipe.</small>
+                    <input type="number" id="comunicacao" name="comunicacao" min="1" max="5" step="1" aria-describedby="comunicacao-descricao" required>
+                </div>
+                <div class="competencia-linha">
+                    <label for="equipe">Trabalho em equipe</label>
+                    <small id="equipe-descricao" class="competencia-descricao">Considere a colaboração, o apoio aos colegas e o compartilhamento de informações.</small>
+                    <input type="number" id="equipe" name="equipe" min="1" max="5" step="1" aria-describedby="equipe-descricao" required>
+                </div>
+                <div class="competencia-linha">
+                    <label for="pressao">Comportamento sob pressão</label>
+                    <small id="pressao-descricao" class="competencia-descricao">Considere o equilíbrio, o respeito e a comunicação de dificuldades em situações de maior demanda.</small>
+                    <input type="number" id="pressao" name="pressao" min="1" max="5" step="1" aria-describedby="pressao-descricao" required>
+                </div>
             </fieldset>
             <button type="submit" class="botao">Conferir preenchimento</button>
             <button type="reset" class="botao botao-secundario">Limpar campos</button>
