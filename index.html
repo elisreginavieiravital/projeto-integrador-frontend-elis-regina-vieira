@@ -15,7 +15,7 @@
         <nav class="navegacao" aria-label="Navegação principal">
             <a href="#competencias">Competências</a>
             <a href="#avaliacao">Avaliação</a>
-            <a href="#resultados">Resultados</a>
+            <a href="resultados.html">Análise de Resultados</a>
             <a href="#apresentacao">Como funciona</a>
         </nav>
     </header>
@@ -43,7 +43,7 @@
         <h2>Avaliação de competências</h2>
         <p>Considere a rotina de trabalho e atribua notas de 1 a 5 a cada competência.</p>
         <p><small>Selecione um código de demonstração para preencher a avaliação.</small></p>
-        <form action="#avaliacao" method="get">
+        <form id="form-avaliacao" action="resultados.html" method="get">
             <fieldset>
                 <legend>Identificação da avaliação</legend>
                 <p class="campo"><label for="codigo">Código do colaborador</label>
@@ -95,8 +95,9 @@
                     <input type="number" id="pressao" name="pressao" min="1" max="5" step="1" aria-describedby="pressao-descricao" required>
                 </div>
             </fieldset>
-            <button type="submit" class="botao">Conferir preenchimento</button>
+            <button type="submit" class="botao">Salvar avaliação e ver resultados</button>
             <button type="reset" class="botao botao-secundario">Limpar campos</button>
+            <p id="form-mensagem" role="alert" hidden></p>
         </form>
     </section>
     <section id="resultados" class="card">
@@ -145,6 +146,8 @@
         <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Documentação HTML — MDN (abre em nova aba)</a></p>
     </details>
     </footer>
+    <script src="js/avaliacoes.js" defer></script>
+    <script src="js/formulario.js" defer></script>
     <script src="js/logica.js" defer></script>
 </body>
 </html>

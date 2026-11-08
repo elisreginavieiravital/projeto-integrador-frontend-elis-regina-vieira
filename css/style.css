@@ -276,3 +276,68 @@ summary {
         grid-row: 1 / span 2;
     }
 }
+
+[hidden] {
+    display: none;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.resumo-medias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: var(--espaco);
+    margin: 0 0 2rem;
+}
+
+.media-item {
+    padding: var(--espaco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background: var(--cor-fundo);
+}
+
+.media-item dd {
+    margin: 0.35rem 0 0;
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.notas-competencias {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.resultado-item {
+    margin-bottom: 1.5rem;
+}
+
+.resultado-cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.35rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.barra-trilha {
+    height: 0.75rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #e1e9e5;
+}
+
+.barra-preenchimento {
+    height: 100%;
+    background: var(--cor-primaria);
+}
+
+.nota-1 { width: 20%; }
+.nota-2 { width: 40%; }
+.nota-3 { width: 60%; }
+.nota-4 { width: 80%; }
+.nota-5 { width: 100%; }
