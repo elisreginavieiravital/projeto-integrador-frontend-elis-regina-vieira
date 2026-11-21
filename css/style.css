@@ -341,3 +341,18 @@ h3 {
 .nota-3 { width: 60%; }
 .nota-4 { width: 80%; }
 .nota-5 { width: 100%; }
+
+.faixa-inicial {
+    background: #fbe8e4;
+    color: #652d24;
+}
+
+.faixa-intermediaria {
+    background: #fff2d7;
+    color: #654810;
+}
+
+.faixa-consolidada {
+    background: #e3f0e9;
+    color: #20523a;
+}

@@ -105,6 +105,7 @@
     <p>Visão geral das competências e das notas atribuídas.</p>
     <p><small>Dados de demonstração.</small></p>
     <button type="button" id="executar-analise" class="botao botao-secundario">Executar análise demonstrativa</button>
+    <p id="resumo-previa" aria-live="polite"></p>
     <div class="tabela-container">
     <table>
         <caption>Resultados por competência</caption>
@@ -113,16 +114,10 @@
                 <th scope="col">Colaborador</th>
                 <th scope="col">Competência</th>
                 <th scope="col">Nota (1 a 5)</th>
+                <th scope="col">Classificação</th>
             </tr>
         </thead>
-        <tbody>
-            <tr><td>ADM-001</td><td>Domínio de sistemas</td><td>4</td></tr>
-            <tr><td>ADM-002</td><td>Organização de tarefas</td><td>3</td></tr>
-            <tr><td>ADM-003</td><td>Qualidade das entregas</td><td>5</td></tr>
-            <tr><td>ADM-004</td><td>Comunicação</td><td>4</td></tr>
-            <tr><td>ADM-005</td><td>Trabalho em equipe</td><td>5</td></tr>
-            <tr><td>ADM-006</td><td>Comportamento sob pressão</td><td>3</td></tr>
-        </tbody>
+        <tbody id="lista-previa"></tbody>
     </table>
     </div>
 
@@ -149,5 +144,6 @@
     <script src="js/avaliacoes.js" defer></script>
     <script src="js/formulario.js" defer></script>
     <script src="js/logica.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
