@@ -39,8 +39,18 @@ Esta versão é um protótipo funcional de frontend, desenvolvido para fins de d
 
 Os colaboradores são identificados por códigos fictícios, e as avaliações ficam armazenadas exclusivamente no navegador utilizado. O sistema não possui integração com servidores, autenticação ou banco de dados externo.
 
-## Desenvolvimento
+## Autoria, créditos e licenças
 
-**Elis Regina Vieira Vital**
+Este projeto foi desenvolvido por **Elis Regina Vieira Vital**, como atividade acadêmica do curso de Análise e Desenvolvimento de Sistemas.
 
-Projeto desenvolvido durante a graduação em Análise e Desenvolvimento de Sistemas, com aplicação de conceitos de desenvolvimento web, organização da informação e experiência do usuário.
+O desenvolvimento contou com o apoio do **ChatGPT (OpenAI)** na criação de materiais visuais e audiovisuais.
+
+As imagens, o vídeo de apresentação e seus textos foram produzidos especificamente para este projeto, com auxílio de inteligência artificial, sem utilização intencional de conteúdos protegidos de terceiros.
+
+A definição da proposta, a escolha das funcionalidades, a orientação do desenvolvimento e a revisão dos resultados foram realizadas pela autora.
+
+O projeto utiliza tecnologias web nativas e não depende de bibliotecas JavaScript ou APIs externas.
+
+A tipografia utilizada no vídeo é DejaVu Sans, cuja licença permissiva é identificada no arquivo `assets/media/licenca.txt`.
+
+O código e os materiais disponibilizados neste repositório destinam-se à demonstração acadêmica. Não foi definida uma licença geral de reutilização para o projeto.
