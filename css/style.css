@@ -356,3 +356,29 @@ h3 {
     background: #e3f0e9;
     color: #20523a;
 }
+
+.controles-previa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: var(--espaco);
+    margin-top: var(--espaco);
+}
+
+.controles-previa .campo {
+    flex: 1 1 15rem;
+    margin: 0;
+}
+
+.filtro-ativo {
+    color: var(--cor-superficie);
+    background: var(--cor-primaria);
+}
+
+.competencia-marcada td:first-child {
+    border-left: 0.25rem solid var(--cor-destaque);
+}
+
+#form-competencia-previa {
+    margin-top: 1.5rem;
+}
